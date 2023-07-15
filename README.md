@@ -29,7 +29,7 @@ to this: go env -w GO111MODULE=off
 Pointers in Go:
 - Go is pass-by-value language
 
-
+```
                 RAM
 -------------------------------------
 Address | Value
@@ -40,12 +40,15 @@ Address | Value
 0003    | 
 0004    |
 .......
+```
 
 &variable - give me the memory address of the value this variable is pointing at
 *pointer  - give me the value this memory address is pointing at
 
 Turn address into value with *address
 Turn value into address with &value
+
+```
 
 Arrays         |    Slices
 ----------------------------------------
@@ -54,12 +57,13 @@ Arrays         |    Slices
 resized        |
 - rarely used  |
 directly       |
+```
 
 Value types: int, float, string, bool, structs - use pointers to change these things in a function
 Reference types: slices, maps, channels, pointers, functions - do not worry about pointers with these
 
 
-
+```
                Map             |         Struct
 -----------------------------------------------------------
 - All keys must be same type   | - Values can be different types
@@ -71,7 +75,7 @@ of related properties          | - Use to represent a "thing"
 - Do not need to know all the  | with a lot of different properties
 the keys at compile time       | 
 - Reference type!!!            | - Value type!!!
-
+```
 
 ## Interfaces
 func (d deck) shuffle() - can only shuffle a value of type 'deck'
